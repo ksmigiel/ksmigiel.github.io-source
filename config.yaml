@@ -1,0 +1,36 @@
+---
+baseurl:            http://ksmigiel.com/
+pygmentsuseclasses: false
+pygmentsstyle: "monokai"
+metadataformat: "yaml"
+permalinks:
+  post: /:year/:month/:slug
+
+params:
+  inc:
+    # Blog Information
+    title:        "Krzysztof Śmigiel | Blog"
+    subtitle:     "Programowanie i data science"
+    cover_image:  blog-cover.jpg
+#    logo:         logo.png
+    
+    github:       ksmigiel
+    twitter:      k_smigiel
+    about_link:   /about
+    
+    # Comments
+    disqus:
+      # Set a shortname to enable disqus comments
+      shortname:  ksmigiel
+    
+    # Sharing settings
+    sharing:
+      twitter:    false
+      facebook:   false
+      gplus:      false
+      hn:         false
+      
+    
+   # Analytics     
+    analytics:
+       oogleid: UA-58701947-1

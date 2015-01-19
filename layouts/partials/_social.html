@@ -1,0 +1,9 @@
+<div class="social">
+    <div>
+        <a href="https://twitter.com/share" class="twitter-share-button" {{ if isset .Site.Params "inc.sharing.twitter.via" }}data-via="{{ .Site.Params.inc.sharing.twitter.via }}"{{ end }} data-text="{{ .Page.title }}" data-related="{{ .Site.Params.inc.twitter }}">Tweet</a>
+    </div>
+    <div>
+        <div class="fb-like" data-width="150" data-layout="button_count" data-action="like" data-show-faces="true" data-send="false"></div>
+    </div>
+</div>
+
