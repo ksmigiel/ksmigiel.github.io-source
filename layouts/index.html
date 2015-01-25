@@ -22,10 +22,11 @@
   </div>
 
   <article class="container">
-    {{ range first 10 (where .Data.Pages "Section" "post") }}
-    {{ .Render "summary" }}
-    {{ end }}
+{{ range first 10 (where .Data.Pages "Section" "post") }}
+{{ .Render "summary" }}
+{{ end }}
   </article>
+
   <section class="pagination" style="text-align:center">
     <a href="/post/" class="btn btn-outline">Archiwum</a>
   </section>

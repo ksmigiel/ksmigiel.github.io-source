@@ -2288,11 +2288,10 @@ article {
   article .container > header, article .container > section, article .container > footer {
     margin: 0 8em; }
   article .social {
-    height: 40px;
+    line-height: 12px;
     padding: 10px 0; }
     article .social > div {
-      display: inline-block;
-      min-width: 120px; }
+      display: inline-block; }
   article .container > footer {
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
@@ -2815,7 +2814,14 @@ article {
   display: inline-block; }  
 
 #tags {
+  text-transform: none; 
   list-style: none;
   display: inline; }
   #tags li {
     display: inline; }
+
+.avatar {
+  width: 30%;
+  float: left;
+  margin: 5px 1em 0 0; }
+

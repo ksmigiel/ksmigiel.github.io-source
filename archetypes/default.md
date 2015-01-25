@@ -1,6 +1,9 @@
 ---
-description: 
-excerpt: 
-authorname: Nicholas Whittier
-authorlink: http://imperialwicket.com
+title:
+description:
+excerpt:
+date:
+authorname: Krzysztof Śmigiel
+authorlink: http://ksmigiel.com
+slug:
 ---

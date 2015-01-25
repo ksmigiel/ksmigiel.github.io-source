@@ -25,12 +25,12 @@ params:
     
     # Sharing settings
     sharing:
-      twitter:    false
-      facebook:   false
+      twitter:    true
+      facebook:   true
       gplus:      false
       hn:         false
       
     
    # Analytics     
     analytics:
-       oogleid: UA-58701947-1
+      googleid: UA-58701947-1

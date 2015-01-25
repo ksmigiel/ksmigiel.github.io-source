@@ -14,7 +14,7 @@
           <time pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
           <ul id="tags">
             {{ range .Params.tags }}
-            <li><a href="tags/{{ . | urlize }}">#{{ . }}</a> </li>
+            <li><a href="/tags/{{ lower . | urlize }}">#{{ . }}</a> </li>
             {{ end }}
           </ul>
         </div>
@@ -24,6 +24,7 @@
 
       <section>
         {{ .Content }}
+        {{ partial "_social.html" . }}
       </section>
 
       {{ with .Site.Params.inc.disqus.shortname }}
