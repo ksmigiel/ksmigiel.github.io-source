@@ -2,14 +2,14 @@
 authorlink: http://ksmigiel.com
 authorname: "Krzysztof Śmigiel"
 date: 2015-01-23T18:16:13+01:00
+title: "MapReduce - wstęp"
 description: "Przetwarzanie danych na sterydach"
 excerpt: "Zapewne słyszeliście o MapReduce, a jeśli nie, to teraz macie okazję usłyszeć (czy tam poczytać). MapReduce jest frameworkiem służącym do przetwarzania dużych zbiorów danych w sposób zrównoleglony. Ostatnimi czasy stał się bardzo popularny dzięki platformom takim jak Hadoop (o nim w kolejnym poście) czy Spark."
 slug: map-reduce
-title: "MapReduce - wstęp"
 tags: ["MapReduce"]
 ---
 
-Zapewne słyszeliście o **MapReduce**, a jeśli nie, to teraz macie okazję poczytać. **MapReduce** jest frameworkiem służącym do przetwarzania dużych zbiorów danych w sposób zrównoleglony. Ostatnimi czasy stał się bardzo popularny dzięki platformom takim jak Hadoop (o nim w kolejnym poście) czy Spark. Wykorzystywany jest wszędzie tam, gdzie dane liczy się w terabajtach. Duże firmy produkują dużo danych, więc znajduje on zastosowanie np. w Google czy Spotify.
+Zapewne słyszeliście o **MapReduce**, a jeśli nie, to teraz macie okazję poczytać. **MapReduce** jest frameworkiem służącym do przetwarzania dużych zbiorów danych w sposób zrównoleglony. Ostatnimi czasy stał się bardzo popularny dzięki platformom takim jak [Hadoop](http://hadoop.apache.org) (o nim w kolejnym poście) czy [Spark](https://spark.apache.org). Wykorzystywany jest wszędzie tam, gdzie dane liczy się w terabajtach. Duże firmy produkują dużo danych, więc znajduje on zastosowanie np. w Google czy Spotify.
 
 ## Funkcyjnie
 Na początku chciałem wspomnieć o dwóch ważnych rzeczach: `map()` i `reduce()`. Te dwie funkcje, które są elementami języków funkcyjnych (choć np. C# ma swoje odpowiedniki w LINQ: `Select()` i `Aggregate()`) działają w analogiczny sposób do MapReduce, tyle że na kolekcjach. Tak więc nazwa nie wzięła się znikąd.
@@ -51,7 +51,7 @@ Proces zazwyczaj odbywa się w 3 etapach: 2 tytułowe i jeden pomocniczy pomięd
 - **Shuffle** - dane są tutaj sortowane i w takich grupach przydzielane do odpowiednich węzłów
 - **Reduce** - następuje agregacja danych na podstawie klucza - oczywiście w sposób równoległy
 
-Tak na prawdę każdy z nas (developerów) nie raz w życiu coś zmapredusił. Bo jeśli sprowadzimy ten proces z chmury i skomplikowanej topologii do pojedynczej bazy danych, to okaże się, że ten cały MapReduce to w rzeczywistości można napisać w SQLu:
+Tak naprawdę każdy z nas (developerów) nie raz w życiu coś zmapredusił. Bo jeśli sprowadzimy ten proces z chmury i skomplikowanej topologii do pojedynczej bazy danych, to okaże się, że ten cały MapReduce to w rzeczywistości można napisać w SQLu:
 {{% highlight sql %}}
     select id, sum(price)
     from products
