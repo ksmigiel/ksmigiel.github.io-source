@@ -124,11 +124,11 @@ Nie przez przypadek wybrałem zliczanie słów jako przykład. Jest to swoisty "
 Uruchomienie joba odbywa się za pomocą komendy:
 
 {{% highlight d %}}
-    hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar \
-        -files mapper.sh, reducer.sh, Mapper.exe, Reducer.exe \
-        -input /user/ksmigiel/krzyzacy.txt \
-        -output /users/ksmigiel/output \
-        -mapper mapper.sh \
+    hadoop jar /usr/hdp/current/hadoop-mapreduce-client/hadoop-streaming.jar
+        -files mapper.sh, reducer.sh, Mapper.exe, Reducer.exe
+        -input /user/ksmigiel/krzyzacy.txt
+        -output /users/ksmigiel/output
+        -mapper mapper.sh
         -reducer reducer.sh
 {{% /highlight %}}
 
