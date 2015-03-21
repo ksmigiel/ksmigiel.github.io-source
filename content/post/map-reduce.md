@@ -16,29 +16,29 @@ Na początku chciałem wspomnieć o dwóch ważnych rzeczach: `map()` i `reduce(
 
 #### F&#35;
 `map()` aplikuje funkcję dla każdego elementu z kolekcji:
-{{% highlight fsharp %}}
-    let sample = [1; 2; 3; 4; 5]
-    // Dodamy do każdego elementu listy "2"
-    List.map (fun x -> x + 2) sample
-    (* val it : int list = [3; 4; 5; 6; 7] *)
-    // lub bardziej funkcyjnie przy pomocy operatora "|>"
-    sample |> List.map (fun x -> x + 2)
-{{% /highlight %}}
+{{< highlight fsharp >}}
+let sample = [1; 2; 3; 4; 5]
+// Dodamy do każdego elementu listy "2"
+List.map (fun x -> x + 2) sample
+(* val it : int list = [3; 4; 5; 6; 7] *)
+// lub bardziej funkcyjnie przy pomocy operatora "|>"
+sample |> List.map (fun x -> x + 2)
+{{< /highlight >}}
 `reduce()` natomiast jak się można domyślić: redukuje naszą kolekcję przy użyciu akumulatora przekazując wynik do następnego wywołania:
-{{% highlight fsharp %}}
-    // Zredukujemy naszą listę obliczając sumę ze wszystkich jej elementów
-    // a i b są sąsiadami
-    sample |> List.reduce (fun a b -> a + b)
-    (* val it : int = 15 *)
-{{% /highlight %}}
+{{< highlight fsharp >}}
+// Zredukujemy naszą listę obliczając sumę ze wszystkich jej elementów
+// a i b są sąsiadami
+sample |> List.reduce (fun a b -> a + b)
+(* val it : int = 15 *)
+{{< /highlight >}}
 
 #### C&#35;
 I analogicznie przy użyciu LINQ
-{{% highlight csharp %}}
-    var sample = new List<int>() {1, 2, 3, 4, 5};
-    sample.Select(x => x + 2);
-    sample.Aggregate((a, b) => a + b);
-{{% /highlight %}}
+{{< highlight csharp >}}
+var sample = new List<int>() {1, 2, 3, 4, 5};
+sample.Select(x => x + 2);
+sample.Aggregate((a, b) => a + b);
+{{< /highlight >}}
 
 Operacje te prezentują prosty workflow jaki przeprowadza się na danych i w wersji rozszerzonej jest on wykorzystywany w MapReduce.
 
@@ -52,12 +52,12 @@ Proces zazwyczaj odbywa się w 3 etapach: 2 tytułowe i jeden pomocniczy pomięd
 - **Reduce** - następuje agregacja danych na podstawie klucza - oczywiście w sposób równoległy
 
 Tak naprawdę każdy z nas (developerów) nie raz w życiu coś zmapredusił. Bo jeśli sprowadzimy ten proces z chmury i skomplikowanej topologii do pojedynczej bazy danych, to okaże się, że ten cały MapReduce to w rzeczywistości można napisać w SQLu:
-{{% highlight sql %}}
-    select id, sum(price)
-    from products
-    group by id
-    order by id
-{{% /highlight %}}
+{{< highlight sql >}}
+select id, sum(price)
+from products
+group by id
+order by id
+{{< /highlight >}}
 Wynik takiego zapytania może być również skutkiem całego procesu MapReduce. I dopóki ilość danych i czas w jakim zapytanie się wykonuje mieszczą się w granicach wymagań biznesu, to wszystko ok! Problem zaczyna się wtedy, gdy wydajność maleje, bo instancje serwerów SQL nie radzą sobie z przetwarzaniem coraz szybciej i ciągle napływających danych. Dlatego głównie ze względu na kwestię wydajności wprowadza się paralelność, co klasyczną analizę danych wybija na wyższy poziom zaawansowania.
 
 Dane mogą teraz zostać przetworzone szybciej. Coś, co kiedyś trwało, lub ze względu na ograniczenia mocy obliczeniowej było prawie niemożliwe, dziś za pomocą chmury i tego typu technologii pozwala niejako na nowo odkrywać algorytmy uczenia maszynowego, data-miningu. A w jaki sposób to zostanie zaprezentowane.
