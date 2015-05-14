@@ -60,3 +60,6 @@ $(document).ready(function() {
     }
   });
 });
+
+// Init highlight.js
+hljs.initHighlightingOnLoad();
