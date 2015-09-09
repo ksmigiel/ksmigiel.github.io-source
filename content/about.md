@@ -5,7 +5,7 @@ type: "about"
 aliases: ["profile/"]
 ---
 
-Zawodowo jestem programistą w [ABB IT](http://new.abb.com/pl/o-nas/technologie/centrum-systemow-informatycznych-abb).
+Zawodowo jestem programistą w [Medius](http://www.mediusflow.com/en).
 Uwielbiam poznawać nowe technologie, dlatego ciągle poszerzam swój warsztat programistyczny o nowinki ze świata szeroko pojętego "dev".
 Moje zainteresowania ciągną się od webdev po data science, i na tym blogu poruszanie się po tych dziedzinach będę opisywać :)
 

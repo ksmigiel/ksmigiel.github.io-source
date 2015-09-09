@@ -1,7 +1,5 @@
 ---
 baseurl:            http://ksmigiel.com/
-#pygmentsuseclasses: false
-#pygmentsstyle: "monokai"
 metadataformat: "yaml"
 permalinks:
   post: /:year/:month/:slug
@@ -12,7 +10,6 @@ params:
     title:        "Krzysztof Śmigiel | Blog"
     subtitle:     "Programowanie i data science"
     cover_image:  blog-cover.jpg
-#    logo:         logo.png
     
     github:       ksmigiel
     twitter:      k_smigiel
@@ -30,7 +27,6 @@ params:
       gplus:      false
       hn:         false
       
-    
    # Analytics     
     analytics:
       googleid: UA-58701947-1
