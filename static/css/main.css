@@ -2332,7 +2332,9 @@ article {
     font-weight: 400;
     margin: 0 0 1.5em; }
   article ol {
-    font-size: 0.8em; }
+    font-size: 0.95em; }
+  article hr + ol {
+      font-size: 0.8em; }
   article ol, article ul {
     font-weight: 600;
     margin: 1.5em 0;
@@ -2764,6 +2766,8 @@ article {
       font-size: 1.4em; }
     article p {
       font-size: 0.9em; }
+    article ol {
+      font-size: 0.85em; }
 
   .blog-cover {
     height: 200px; }
