@@ -2040,7 +2040,7 @@ a {
     text-decoration: none; }
 
 .container {
-  max-width: 820px;
+  max-width: 980px;
   margin: 0 auto; }
 
 .article-cover, .blog-cover {
@@ -2410,10 +2410,6 @@ article {
       padding-left: 5% !important;
       font-size: 1.1em;
       border: 0; }
-  article code {
-    border-bottom: 1px solid #ddd;
-    border-radius: 2px;
-    color: #222; }
   article .rounded img {
     border-radius: 6px; }
   article .border img {
