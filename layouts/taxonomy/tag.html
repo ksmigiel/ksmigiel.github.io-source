@@ -8,7 +8,7 @@
     {{ range .Data.Pages }}
     <h3><a href="{{ .Permalink }}">{{ .Title}}</a></h3>
     <div class="meta">
-      <time pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+      <time class="visibility-hidden" pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
       <ul id="tags">
         {{ range .Params.tags }}
         <li><a href="/tags/{{ lower . | urlize }}">#{{ . }}</a> </li>

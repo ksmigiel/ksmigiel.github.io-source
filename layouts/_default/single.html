@@ -11,7 +11,7 @@
       <header>
         <div class="meta">
           Autor <address><a rel="author" href="{{ .Params.authorlink }}" title="{{ .Params.authorname }}" target="_blank">{{ .Params.authorname }}</a></address> &mdash;
-          <time pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+          <time class="visibility-hidden" pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
           <ul id="tags">
             {{ range .Params.tags }}
             <li><a href="/tags/{{ lower . | urlize }}">#{{ . }}</a> </li>

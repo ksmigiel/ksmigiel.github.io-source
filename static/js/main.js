@@ -45,18 +45,26 @@ $(document).ready(function() {
 
     switch (isNaN(fst)) {
       case false:
-        translateBy(monthsGenitive);
+        translateGenitive();
         break;
       case true:
-        translateBy(monthsNominative);
+        translateNominative();
         break;
     }
 
-    function translateBy(dict) {
-      $.each(dict, function(key, value) {
-        var translated = dt.html().replace(key, value);
-        dt.text(translated);
-      });
+    function translateGenitive() {
+      translate(monthsGenitive, dt.html().split(' ')[1]);
+    }
+    
+    function translateNominative() {
+      translate(monthsNominative, dt.html().split(' ')[0]);
+    }
+
+    function translate(dictionary ,translationKey) {
+      var translation = dictionary[translationKey];
+      var translated = dt.html().replace(translationKey, translation);
+      dt.text(translated);
+      dt.removeClass('visibility-hidden');
     }
   });
 });

@@ -2823,3 +2823,6 @@ article {
   float: left;
   margin: 5px 1em 0 0; }
 
+.visibility-hidden {
+  visibility: hidden;
+}
