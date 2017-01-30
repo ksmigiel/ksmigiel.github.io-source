@@ -74,6 +74,12 @@ _PS. Pracuję nad implementacją filtra pod .NET Core, więc sprawdzajcie mojego
 
 ---
 
+1. http://ksmigiel.com/2016/06/bloom-filters/
+2. https://www.cs.cmu.edu/~dga/papers/cuckoo-conext2014.pdf
+3. https://en.wikipedia.org/wiki/Cuckoo_hashing
+4. https://pl.wikipedia.org/wiki/Paso%C5%BCyty_l%C4%99gowe
+5. http://mybiasedcoin.blogspot.com/2014/10/cuckoo-filters.html
+
 [1]: http://ksmigiel.com/2016/06/bloom-filters/
 [2]: https://www.cs.cmu.edu/~dga/papers/cuckoo-conext2014.pdf
 [3]: https://en.wikipedia.org/wiki/Cuckoo_hashing
