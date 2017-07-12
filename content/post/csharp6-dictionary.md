@@ -5,8 +5,17 @@ date: 2017-04-05T20:13:09+00:00
 description: "Oraz dziwne zachowanie razem z List<T>"
 excerpt: "Chciałem po krótce zaprezentować błąd (albo feature?) C# związany z dodanym w wersji 6 inicjalizatorem słownika. Jest to o tyle ciekawa kwestia, że nie ustrzeże nas przed tym błędem ani statyczna analiza kodu, ani kompilacja - dopiero runtime rzuci w nas wyjątkiem!."
 slug: csharp6-dictionary
-title: "Inicjalizacja Dictionary<TKey, TValue> w C# 6"
+title: "[AKTUALIZACJA] Inicjalizacja Dictionary<TKey, TValue> w C# 6"
 tags: ["csharp", "bug"]
+---
+
+## AKTUALIZACJA 17.06.2017
+Jak się okazuje _"it's not a bug, it's a feature!"_. Dokładnie takie zachowanie, jak opisanie w poście, jest zawarte w [specyfikacji języka](https://github.com/dotnet/roslyn/issues/18475#issuecomment-309168670).
+
+> A member initializer that specifies a collection initializer after the equals sign is an initialization of an embedded collection. Instead of assigning a new collection to the target field, property or indexer, the elements given in the initializer are added to the collection referenced by the target. The target must be of a collection type that satisfies the requirements specified in §7.6.11.3.
+
+Wypada następnym razem zejść jeszcze niżej niż do IL i grzebać w specyfikacji :) Fajnie, że ktoś na te zgłoszenia w ogóle patrzy i liczy się ze środowiskiem open source - tutaj duży plus dla Microsoftu!
+
 ---
 
 Chciałem po krótce zaprezentować błąd (albo feature?) C# związany z dodanym w wersji 6 **inicjalizatorem słownika**. Jest to o tyle ciekawa kwestia, że nie ustrzeże nas przed tym błędem ani statyczna analiza kodu, ani kompilacja - dopiero 
