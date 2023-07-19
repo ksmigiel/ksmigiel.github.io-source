@@ -1,15 +1,12 @@
-{{ partial "header.html" . }}
-  <article class="container">
-    <header><h1>404</h1></header>
-    <section>
-      <p>That doesn't seem to exist! Recent articles are below or search the <a href="/post/">archives</a>.</p>
-    </section>
-    <hr>
-    {{ range first 10 .Data.Pages }}
-      {{ .Render "summary" }}
-    {{ end }}
-  </article>
-  <section class="pagination" style="text-align:center">
-    <a href="/post/" class="btn btn-outline">Archives</a>
-  </section>
-{{ partial "footer.html" . }}
+{{ define "title"}}
+    404 |  NOT FOUND
+{{ end }}
+
+{{ define "main"}}
+<div class="wrapper">
+    <main class="main-404" aria-label="Content">
+        <h1>404 NOT FOUND</h1>
+        <p>You just hit a route that doesn't exist.</p>
+    </main>
+</div>
+{{ end }}

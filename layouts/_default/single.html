@@ -1,38 +1,27 @@
-{{ partial "header-title.html" . }}
-  {{ if isset .Params "cover_image" }}
-  <div class="article-cover">
-    <div>
-      <img src="/images/{{ .Params.cover_image }}" class="image">
-    </div>
-  </div>
-  {{ end }}
-  <article>
-    <div class="container">
-      <header>
-        <div class="meta">
-          Autor <address><a rel="author" href="{{ .Params.authorlink }}" title="{{ .Params.authorname }}" target="_blank">{{ .Params.authorname }}</a></address> &mdash;
-          <time class="visibility-hidden" pubdate datetime="{{ .Date.Format "2006-01-02" }}" title="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
-          <ul id="tags">
-            {{ range .Params.tags }}
-            <li><a href="/tags/{{ lower . | urlize }}">#{{ . }}</a> </li>
-            {{ end }}
-          </ul>
-        </div>
-        <h1 class="title">{{ .Title }}</h1>
-        <h2 class="subtitle">{{ .Description }}</h2>
-      </header>
-
-      <section>
-        {{ .Content }}
-        {{ partial "_social.html" . }}
-      </section>
-
-      {{ with .Site.Params.inc.disqus.shortname }}
-      <section>
-        {{ partial "_disqus.html" . }}
-      </section>
-      {{ end }}
-
-    </div>
-  </article>
-{{ partial "footer.html" . }}
+{{ define "main" }}
+<div class="wrapper post">
+    <main class="page-content" aria-label="Content">
+        <article>
+            <header class="header">
+                <h1 class="header-title">{{ .Title }}</h1>
+                {{ with .Date }}
+                {{ $ISO_time := dateFormat "2006-01-02T15:04:05-07:00" . }}
+                <div class="post-meta">
+                    <time datetime="{{ $ISO_time }}" itemprop="datePublished"> {{ . | time.Format ":date_medium" }} </time>
+                </div>
+                {{ end }}
+            </header>
+            {{- if or .Params.toc .Site.Params.toc }}
+            <details class="toc">
+                <summary><b>Table of Contents</b></summary>
+                {{ .TableOfContents }}
+            </details>
+            {{- end -}}
+            <div class="page-content">
+                {{ .Content }}
+            </div>
+        </article>
+        {{- partial "comments.html" . -}}
+    </main>
+</div>
+{{ end }}

@@ -1,9 +1,6 @@
 ---
-title:
-description:
-excerpt:
-date:
-authorname: Krzysztof Śmigiel
-authorlink: http://ksmigiel.com
-slug:
+title: "{{ replace .Name "-" " " | title }}"
+date: {{ .Date }}
+draft: true
 ---
+

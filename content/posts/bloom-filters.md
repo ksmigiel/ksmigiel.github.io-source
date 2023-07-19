@@ -151,6 +151,8 @@ Z Filtrów Blooma korzystają m.in:
 - [Google BigTable](https://cloud.google.com/bigtable/)
 - [Akamai](https://www.akamai.com/)
 
+<br>
+
 ---
 
 1. https://en.wikipedia.org/wiki/Bloom_filter

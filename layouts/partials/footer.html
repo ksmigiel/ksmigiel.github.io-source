@@ -1,34 +1,19 @@
-<footer class="site-footer">
-  <div class="container">
-    <nav>
-      <a href="/">Blog</a> &middot;
-      <a href="/tags">Tagi</a> &middot;
-      <a href="/post">Archiwum</a> &middot;
-      {{ with .Site.Params.inc.about_link }}<a href="{{ . }}">O mnie</a>{{ end }}
-    </nav>
+<footer class="footer">
+    <span class="footer_item"> </span>
+    &nbsp;
 
-    <nav class="social">
-      {{ with .Site.Params.inc.twitter }}
-      <a href="https://twitter.com/{{ . }}" title="Follow on Twitter" target="_blank"><i class="icon icon-twitter black"></i></a>
-      {{ end }}
-      {{ with .Site.Params.inc.github }}
-      <a href="https://github.com/{{ . }}" title="Follow on Github" target="_blank"><i class="icon icon-github black"></i></a>
-      {{ end }}
-      {{ with .Site.Params.inc.facebook }}
-      <a href="http://facebook.com/{{ . }}" title="Follow on Facebook" target="_blank"><i class="icon icon-facebook black"></i></a>
-      {{ end }}    
-      <a href="/index.xml" title="RSS Feed">
-        <i class="icon icon-rss black"></i>
-      </a>
-    </nav>
-  </div>
+    <div class="footer_social-icons">
+        {{- partial "socialIcons.html" site.Params.socialIcons -}}
+    </div>
+    <small class="footer_copyright">
+        Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noreferrer noopener">Hugo blog awesome</a>
+        theme on
+        <a href="https://gohugo.io" target="_blank" rel="noreferrer noopener">Hugo</a>.
+    </small>
 </footer>
-{{ partial "_scripts.html" . }}
 
-<!-- 
-     <p>Incorporated theme by <a href="https://sendtoinc.com">Inc</a></p>
-     <p>Hugo port by @imperialwicket: https://github.com/imperialwicket/hugo-incorporated</p>
-  -->
-
-</body>
-</html>
+{{- if .Site.Params.goToTop -}}
+<a href="#" title="Go to top" id="totop">
+    {{ partial "svgs/arrowUp.svg" (dict "height" 48 "width" 48) . }}
+</a>
+{{- end -}}

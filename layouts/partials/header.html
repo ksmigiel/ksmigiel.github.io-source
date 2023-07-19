@@ -1,29 +1,46 @@
-<!doctype html>
-<html>
-<head>
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ .Site.Params.inc.title }} &mdash; {{ .Site.Params.inc.subtitle }}</title>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:700,600,400" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/main.css">
-  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <link href="{{ .Site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Params.inc.title }}" />
-  <meta name="title" content="{{ .Site.BaseURL }}">
-  <link rel="canonical" href="{{ .Site.BaseURL }}">
-  <meta property="og:title" content="{{ .Site.Params.inc.title }}"/>
-  <meta property="og:url" content="{{ .Site.BaseURL }}"/>
-  <meta property="og:image" content="{{ .Site.BaseURL }}images/{{ .Site.Params.inc.logo }}"/>   
-  <meta property="og:site_name" content="{{ .Site.Params.inc.title }}">
-</head>
-<body>
-<section class="site-nav">
-  <header>
-    <nav id="navigation">
-      <a href="/" class="home">Blog</a>
-      <a href="/tags">Tagi</a>
-      <a href="/post">Archiwum</a>
-      {{ with .Site.Params.inc.about_link }}<a href="{{ . }}">O mnie</a>{{ end }}
-    </nav>
-  </header>
-</section>
+<div class="navbar" role="navigation">
+    <nav class="menu" aria-label="Main Navigation">
+        <a href="{{ .Site.Home.Permalink }}" class="logo">
+            {{ partial "svgs/home.svg" (dict "height" 25 "width" 25) . }}
+        </a>
+        <input type="checkbox" id="menu-trigger" class="menu-trigger" />
+        <label for="menu-trigger">
+            <span class="menu-icon">
+                {{ partial "svgs/menu.svg" (dict "height" 25 "width" 25) . }}
+            </span>
+        </label>
 
+        <div class="trigger">
+            <ul class="trigger-container">
+                {{ $currentPage := . }}
+                {{ range .Site.Menus.main }}
+                <li>
+                    <a class="menu-link {{ if or ($currentPage.IsMenuCurrent " main" .)
+                        ($currentPage.HasMenuCurrent "main" .) }}active{{ end }}" href="{{ .URL }}">
+                        {{ .Name }}
+                    </a>
+                    {{ if .HasChildren }}
+                    <ul>
+                        {{ range .Children }}
+                        <li>
+                            <a class="menu-link {{ if $currentPage.IsMenuCurrent " main" . }}active{{ end }}"
+                                href="{{ .URL }}">
+                                {{ .Name }}
+                            </a>
+                        </li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                </li>
+                {{ end }}
+                <li class="menu-separator">
+                    <span>|</span>
+                </li>
+            </ul>
+            <a id="mode" href="#">
+                {{ partial "svgs/sun.svg" (dict "height" 21 "width" 21 "class" "mode-sunny" "title" "LIGHT") . }}
+                {{ partial "svgs/sun.svg" (dict "height" 21 "width" 21 "class" "mode-moon" "title" "DARK") . }}
+            </a>
+        </div>
+    </nav>
+</div>
