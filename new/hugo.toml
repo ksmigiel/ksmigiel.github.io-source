@@ -1,10 +1,8 @@
-title = "Awesome Hugo blog"
+title = "DevOops adventures"
 baseURL = 'https://ksmigiel.com/'
 
 # This is what goes in <html lang="">
 languageCode = 'en-us'
-
-
 
 # This defines how dates are formatted
 defaultContentLanguage = "en-gb"
@@ -27,10 +25,10 @@ disqusShortname = ''
     noClasses = false
   [markup.goldmark.renderer]
     unsafe = true
-    [markup.tableOfContents]
-        startLevel = 2 # ToC starts from H2
-        endLevel = 4 # ToC ends at H4
-        ordered = false # generates <ul> instead of <ol>
+  [markup.tableOfContents]
+      startLevel = 2 # ToC starts from H2
+      endLevel = 4 # ToC ends at H4
+      ordered = false # generates <ul> instead of <ol>
 
 [menu]
   [[menu.main]]
@@ -52,14 +50,14 @@ disqusShortname = ''
     weight = 30
 
 [params]
-  sitename = "Awesome hugo blog"
+  sitename = "DevOops adventures"
   defaultColor = "dark" # set color mode: dark, light, auto
   # Setting it to 'auto' applies the color scheme based on the visitor's device color preference.If you don't specify anything, ignore this parameter, or leave it blank,
   # the default value is set to 'auto'.
   # You can take a look at layouts/index.html for more information.
-  description = "Minimal Hugo blog theme with light and dark mode support"
+  description = "My thoughts about DevOps and Platform Engineering."
   mainSections = ['posts']
-  toc = true # set to false to disable table of contents 'globally'
+  toc = false # set to false to disable table of contents 'globally'
   goToTop = true # set to false to disable 'go to top' button
   additionalScripts = ['js/custom.js', 'js/custom-2.js']
   # Will try to load 'assets/js/custom.js' and 'assets/js/custom-2.js'.
@@ -70,9 +68,9 @@ disqusShortname = ''
 [params.author]
   avatar = "avatar.jpg" # put the file in assets folder; also ensure that image has same height and width
   # Note: image is not rendered if the resource(avatar image) is not found. No error is displayed.
-  intro = "Awesome hugo blog"
-  name = "Sidharth R"
-  description = "A fast, minimalistic Hugo theme with light and dark mode support, for running a personal site or blog"
+  intro = "Krzysztof Śmigiel Blog"
+  name = "Krzysztof Ś"
+  description = "My thoughts about DevOps and Platform Engineering."
 
 # Allow to override webmanifest options
 [params.webmanifest]
@@ -89,13 +87,13 @@ disqusShortname = ''
 
 [[params.socialIcons]]
 name = "github"
-url = "https://github.com/hugo-sid"
+url = "https://github.com/ksmigiel"
 
 [[params.socialIcons]]
-name = "twitter"
-url = "https://twitter.com"
+name = "linkedin"
+url = "https://www.linkedin.com/in/ksmigiel/"
 
 [[params.socialIcons]]
-name = "Rss"
+name = "rss"
 url = "index.xml"
 

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2015/01/pierwszy-post
 title: Pierwszy post...
 description: ...czyli biorę się za blogerkę!
 excerpt: "Cześć! Pomysł na stworzenie bloga chodził mi już jakiś czas po głowie, ale jak to z pomysłami bywa, trochę czasu upłynęło zanim przeszedłem z fazy planingu do fazy implementacji."

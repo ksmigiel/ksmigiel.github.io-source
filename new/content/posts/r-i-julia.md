@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2015/03/romeo-i-julia
 authorlink: http://ksmigiel.com
 authorname: "Krzysztof Śmigiel"
 date: 2015-03-21T21:38:00+01:00

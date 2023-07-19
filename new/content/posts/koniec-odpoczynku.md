@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2015/09/koniec-odpoczynku
 authorlink: http://ksmigiel.com
 authorname: "Krzysztof Śmigiel"
 date: 2015-09-09T10:26:38+02:00

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2016/02/rb-gateway
 authorlink: http://ksmigiel.com
 authorname: Krzysztof Śmigiel
 date: 2016-02-26T21:59:09+01:00

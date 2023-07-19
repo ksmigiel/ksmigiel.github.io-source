@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2016/01/powershell
 authorlink: http://ksmigiel.com
 authorname: Krzysztof Śmigiel
 date: 2016-01-28T21:59:09+01:00

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2018/09/kendo-charts
 authorlink: http://ksmigiel.com
 authorname: Krzysztof Śmigiel
 date: 2018-09-18T00:00:00+00:00

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2015/12/u-sql
 authorlink: http://ksmigiel.com
 authorname: "Krzysztof Śmigiel"
 date: 2015-12-20T20:26:38+01:00

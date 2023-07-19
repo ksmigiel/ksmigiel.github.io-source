@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2016/06/bloom-filters
 authorlink: http://ksmigiel.com
 authorname: Krzysztof Śmigiel
 date: 2016-06-11T11:59:09+01:00

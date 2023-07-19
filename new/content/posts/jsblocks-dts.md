@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2015/05/jsblocks-dts
 authorlink: http://ksmigiel.com
 authorname: "Krzysztof Śmigiel"
 date: 2015-05-23T18:18:10+02:00

@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2018/01/netcore-console
 authorlink: http://ksmigiel.com
 authorname: Krzysztof Śmigiel
 date: 2018-01-18T13:13:09+00:00

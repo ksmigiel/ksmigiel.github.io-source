@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2016/03/js-this
 authorlink: http://ksmigiel.com
 authorname: Krzysztof Śmigiel
 date: 2016-03-30T21:59:09+01:00

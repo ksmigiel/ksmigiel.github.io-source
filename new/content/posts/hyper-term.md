@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2019/01/hyper-git
 authorlink: http://ksmigiel.com
 authorname: Krzysztof Śmigiel
 date: 2019-01-04T13:13:09+00:00
@@ -87,6 +89,8 @@ export GIT_PS1_SHOWUPSTREAM="auto git name"
 ## Podsumowanie
 Nie jest to może normalny sposób używania gita, ale co się nauczyłem to moje. Bardzo lubię tracić czas na takie "debugging stories". To najlepszy materiał na posty.
 
+<br>
+
 ---
 
 [1]: http://ksmigiel.com/2016/01/powershell/
@@ -98,3 +102,13 @@ Nie jest to może normalny sposób używania gita, ale co się nauczyłem to moj
 [7]: https://github.com/arcticicestudio/nord-hyper
 [8]: https://github.com/zeit/hyper/issues/1252
 [9]: https://github.com/git/git/blob/master/contrib/completion/git-prompt.sh
+
+1. http.//ksmigiel.com/2016/01/powershell/
+2. https.//desktop.github.com/
+3. https.//github.com/dahlbyk/posh-git
+4. https.//git-scm.com/
+5. https.//reddit.com/r/unixporn
+6. https.//hyper.is
+7. https.//github.com/arcticicestudio/nord-hyper
+8. https.//github.com/zeit/hyper/issues/1252
+9. https.//github.com/git/git/blob/master/contrib/completion/git-prompt.sh

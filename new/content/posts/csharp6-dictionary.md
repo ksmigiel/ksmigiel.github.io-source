@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2017/04/csharp6-dictionary
 authorlink: http://ksmigiel.com
 authorname: Krzysztof Śmigiel
 date: 2017-04-05T20:13:09+00:00

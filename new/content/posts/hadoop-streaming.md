@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2015/02/hadoop-streaming
 authorlink: http://ksmigiel.com
 authorname: "Krzysztof Śmigiel"
 date: 2015-02-17T21:51:00+01:00

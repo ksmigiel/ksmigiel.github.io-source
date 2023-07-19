@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2015/11/devtalk-cz2
 authorlink: http://ksmigiel.com
 authorname: "Krzysztof Śmigiel"
 date: 2015-11-18T17:26:38+01:00

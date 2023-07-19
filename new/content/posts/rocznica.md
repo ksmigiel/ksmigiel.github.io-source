@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2016/01/rocznica
 authorlink: http://ksmigiel.com
 authorname: Krzysztof Śmigiel
 date: 2016-01-20T20:03:40+01:00

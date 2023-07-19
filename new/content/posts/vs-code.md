@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2015/05/vs-code
 authorlink: http://ksmigiel.com
 authorname: "Krzysztof Śmigiel"
 date: 2015-05-14T16:38:00+01:00

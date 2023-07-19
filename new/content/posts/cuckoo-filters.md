@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2017/01/cuckoo-filters
 authorlink: http://ksmigiel.com
 authorname: Krzysztof Śmigiel
 date: 2017-01-24T18:59:09+01:00

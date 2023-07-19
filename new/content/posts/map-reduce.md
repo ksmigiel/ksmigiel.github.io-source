@@ -1,4 +1,6 @@
 ---
+aliases:
+  - /2015/01/map-reduce
 authorlink: http://ksmigiel.com
 authorname: "Krzysztof Śmigiel"
 date: 2015-01-23T18:16:13+01:00
