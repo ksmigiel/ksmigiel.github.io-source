@@ -52,7 +52,7 @@ jobs:
             --gc \
             --minify \
       - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-artifact@v3
         with:
           path: ./public
 
@@ -64,9 +64,17 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Checkout GitHub Pages repository
         uses: actions/checkout@v3
         with:
           repository: ksmigiel/ksmigiel.github.io
           token: ${{ secrets.GH_TOKEN }}
-          
+      - name: Download artifacts
+        uses: actions/download-artifact@v3
+      - name: Deploy to GitHub Pages
+        run: |
+          git config user.name "GitHub Automation"
+          git config user.email git@github.com
+
+          ls -la
+
