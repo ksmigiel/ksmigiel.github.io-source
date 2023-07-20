@@ -76,7 +76,7 @@ jobs:
           git config user.name "GitHub Automation"
           git config user.email git@github.com
 
-          cp ./artifact/. ./
+          cp ./artifact/. ./ -rf
           rm artifact -rf
 
           git add .
