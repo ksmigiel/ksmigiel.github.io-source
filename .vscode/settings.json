@@ -4,5 +4,8 @@
         "markdown",
         "latex",
         "plaintext"
-    ]
+    ],
+    "yaml.schemas": {
+        "https://json.schemastore.org/github-workflow.json": "file:///c%3A/git/ksmigiel.github.io-source/.github/workflows/hugo.yaml"
+    }
 }
